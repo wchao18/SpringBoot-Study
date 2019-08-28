@@ -8,5 +8,5 @@
     <artifactId>SpringBoot-Study</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <description>springboot整合常用服务</description>
+    <description>springboot 1.* 整合常用服务</description>
 </project>
