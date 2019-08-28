@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <!--默认spring的样式-->
+    <link rel="icon" href="/images/mldn.ico" type="image/x-icon" />
+	<title>SpringBoot模版渲染</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+	<p th:text="'官方网站：' + ${url}"/>
+	<p th:text="'用户名：' + ${mid}"/>
+</body>
+</html>

@@ -1,0 +1,12 @@
+server:
+  port: 8089   #服务端口
+
+spring:
+  messages:
+    basename: i18n/Message,i18n/Page
+  #thymeleaf:
+    #prefix:classpath:/templates/    #默认是html文件，可以修改文件后缀，指定htm等
+  thymeleaf:
+    suffix: .htm
+
+

@@ -1,0 +1,12 @@
+spring:
+  redis:
+    host: 192.168.13.171 #\u516C\u53F8\u5730\u5740
+    port: 6379
+    database: 15
+    password: iampassword
+    timeout: 5000
+    pool:
+      max-active: 8
+      max-idle: 8
+      min-idle: 1
+      max-wait: 5000

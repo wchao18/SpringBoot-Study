@@ -1,0 +1,19 @@
+spring:
+  mail:
+    default-encoding: utf-8
+    host: mail.weherepost.com
+    username: it-saas@weherepost.com
+    password: It-saas2019
+    protocol: smtp
+    port: 25
+    properties:
+      mail:
+        smtp:
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+          auth : true
+          starttls:
+            enable : true
+            required : true
+

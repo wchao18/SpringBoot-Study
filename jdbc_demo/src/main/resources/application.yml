@@ -1,0 +1,30 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   #数据源类型
+    driver-class-name: com.mysql.jdbc.Driver   #mysql驱动程序类
+    url: jdbc:mysql://127.0.0.1:3306/mydb?useUnicode=true&characterEncoding=utf8  #编码不加，可能会乱码
+    username: root
+    password: 121842276
+    filters : stat,wall,log4j  #数据源监控配置
+    dbcp2:
+      initial-size: 5        #初始化提供的连接数
+      min-idle: 5            #数据库连接池维持的最小连接数
+      max-total: 20          #最大连接数
+      max-wait-millis: 200   #等待连接的最大超时时间,单位ms
+mybatis:
+  #config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis配置文件所在路径
+  mapper-locations: classpath*:mybatis/**/*.xml     #mapper.xml配置文件
+  type-aliases-package: com.it.dao.domain       #设置类的别名,然后在mapper的xml文件中设置
+
+##pageHelper的配置
+pagehelper:
+  reasonable: false        #是否禁用合理化,（BUG）目前发现false的时候，pageNum<1，有数据返回
+  #启用合理化时，如果pageNum<1会查询第一页，如果pageNum>pages会查询最后一页
+  #禁用合理化时，如果pageNum<1或pageNum>pages会返回空数据
+
+  auto-dialect: true       #是否检测dialect
+  #dialect: mysql          #加了会回报错，用上面也是可以的
+
