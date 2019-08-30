@@ -6,5 +6,5 @@ management:
 
 #配置actuator的info的信息
 info:
-  app.name : $artifactId$
+  app.name : $project.artifactId$
   app.version : $project.version$
