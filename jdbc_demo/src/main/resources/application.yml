@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver   #mysql驱动程序类
     url: jdbc:mysql://127.0.0.1:3306/mydb?useUnicode=true&characterEncoding=utf8  #编码不加，可能会乱码
     username: root
-    password: 121842276
+    password: 123456
     filters : stat,wall,log4j  #数据源监控配置
     dbcp2:
       initial-size: 5        #初始化提供的连接数
