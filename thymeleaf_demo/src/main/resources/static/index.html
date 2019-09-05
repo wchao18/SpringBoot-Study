@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+
+<button class="submit">新增提交</button>
+
+<script>
+
+    window.onload = function () {
+        $(".submit").on("click", function () {
+            $.ajax({
+                url: "http://127.0.0.1:8081/api/get?name=测试",
+                type: "GET",
+                /*data: {
+                    name: "测试"
+                },*/
+                success: function(data, status, xhr) {
+                    console.log(data);
+                    alert(data.name);
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>
