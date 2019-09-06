@@ -1,9 +1,7 @@
 package com.it.controller;
 
-import org.apache.commons.logging.LogFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LogController {
 
+    /**
+     * Simple Logging Facade for Java (slf4j)
+     */
     private static Logger logger = LoggerFactory.getLogger(LogController.class);
 
     /**
@@ -27,6 +28,11 @@ public class LogController {
        logger.info("*******info");
        logger.error("******error");
        return "success";
+    }
+
+    public static void main(String[] args) {
+        logger.info("*******info");
+        logger.error("******error");
     }
 
 }
