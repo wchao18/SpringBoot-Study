@@ -14,7 +14,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
  * @date 2019/08/21 15:09
  */
 @Configuration
-public class RedisConfig {
+public class RedisTemplateConfig {
 
 
    /* //操作字符串

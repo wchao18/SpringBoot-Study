@@ -1,6 +1,6 @@
 spring:
   redis:
-    host: 192.168.13.171 #\u516C\u53F8\u5730\u5740
+    host: 192.168.13.171
     port: 6379
     database: 15
     password: iampassword
