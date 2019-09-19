@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+
+#  http:
+#    multipart:
+#      max-file-size: 10MB  #设置单个文件的上传大小
+#      max-request-size: 30MB #设置总体的大小请求（这个有效）
+#      location: /  #设置临时上传目录
+
