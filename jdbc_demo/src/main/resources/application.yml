@@ -26,6 +26,6 @@ pagehelper:
   #禁用合理化时，如果pageNum<1或pageNum>pages会返回空数据
 
   auto-dialect: true       #是否检测dialect
-  #dialect: mysql          #加了会回报错，用上面也是可以的
-  supportMethodsArguments : false   #是否支持方法参数，坑
+  #dialect: mysql          #加了会报错，用上面也是可以的
+  supportMethodsArguments : false   #是否支持方法参数，参数中有pageNum和pageSize会自动分页（特别注意）
 
