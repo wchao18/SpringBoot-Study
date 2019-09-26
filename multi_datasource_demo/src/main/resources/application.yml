@@ -31,17 +31,8 @@ spring:
 
 
 mybatis:
-  mapper-locations: classpath*:mybatis/**/*.xml     #mapper.xml配置文件
   type-aliases-package: com.it.dao.domain       #设置类的别名,然后在mapper的xml文件中设置
-
-
-##pageHelper的配置
-pagehelper:
-  reasonable: false        #是否禁用合理化,（BUG）目前发现false的时候，pageNum<1，有数据返回
-  #启用合理化时，如果pageNum<1会查询第一页，如果pageNum>pages会查询最后一页
-  #禁用合理化时，如果pageNum<1或pageNum>pages会返回空数据
-
-  auto-dialect: true       #是否检测dialect
-  #dialect: mysql          #加了会报错，用上面也是可以的
-  supportMethodsArguments : false   #是否支持方法参数，参数中有pageNum和pageSize会自动分页（特别注意）
-
+logging:
+  level:
+     com.it.dao : debug
+     root : error
