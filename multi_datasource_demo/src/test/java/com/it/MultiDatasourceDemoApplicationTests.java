@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.it.dao.domain.User;
 import com.it.dao.mapper1.UserMapper1;
 import com.it.dao.mapper2.UserMapper2;
+import com.it.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +23,22 @@ public class MultiDatasourceDemoApplicationTests {
     @Autowired
     private UserMapper2 userMapper2;
 
+    @Autowired
+    private UserService userService;
+
     @Test
     public void test1() {
         PageHelper.startPage(1,10);
         List<User> users = userMapper1.selectList();
+    }
+
+    @Test
+    public void insert1(){
+        User user = new User();
+        user.setAddress("浙江杭州");
+        user.setAge(27);
+        user.setName("哈哈哈哈哈");
+        userService.addUser(user);
     }
 
 
