@@ -71,8 +71,6 @@
             <version>2.9.0</version>
         </dependency>
         <!-- redisson 结束-->
-
-
     </dependencies>
 
     <build>

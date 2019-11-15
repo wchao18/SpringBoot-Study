@@ -25,7 +25,7 @@ public class SerController {
         user.setAddress("浙江");
         user.setAge(25);
         user.setName("哈哈");
-        objectRedisTemplate.opsForValue().set("object",user);
+        objectRedisTemplate.opsForValue().set("object","哈哈");
         Object object = objectRedisTemplate.opsForValue().get("object");
         System.out.println(object);
         return "success";

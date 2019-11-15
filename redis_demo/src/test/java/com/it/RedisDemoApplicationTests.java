@@ -28,4 +28,5 @@ public class RedisDemoApplicationTests {
         System.out.println(stringController.string());
     }
 
+
 }

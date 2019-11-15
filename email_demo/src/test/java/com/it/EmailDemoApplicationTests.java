@@ -1,17 +1,16 @@
 package com.it;
 
-import org.apache.velocity.app.VelocityEngine;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.ui.velocity.VelocityEngineUtils;
 
 import javax.mail.internet.MimeMessage;
@@ -19,18 +18,16 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-/*@RunWith(SpringRunner.class)
-@SpringBootTest*/
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(EmailDemoApplication.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class EmailDemoApplicationTests {
 
     @Autowired
     private JavaMailSender javaMailSender;
 
     //springboot升级了以后，导致这个类没有了
-    @Autowired
-    private VelocityEngine velocityEngine;
+    /*@Autowired
+    private VelocityEngine velocityEngine;*/
 
     private static Logger logger = LoggerFactory.getLogger(EmailDemoApplicationTests.class);
 
@@ -92,7 +89,7 @@ public class EmailDemoApplicationTests {
     }
 
 
-    @Test
+   /* @Test
     public void sendTemplateMail(){
         try {
             MimeMessage mimeMessage = javaMailSender.createMimeMessage();
@@ -112,6 +109,6 @@ public class EmailDemoApplicationTests {
         }catch (Exception e){
 
         }
-    }
+    }*/
 
 }
