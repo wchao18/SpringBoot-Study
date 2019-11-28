@@ -1,0 +1,36 @@
+{
+  "database": "mydb",
+  "tableList": [
+    {
+      "tableName": "t_tenant_permission",
+      "level": 1,
+      "insert": [
+        {
+          "column": "id"
+        }
+      ],
+      "update": [
+        {
+          "column": "id"
+        },
+        {
+          "column": "pid"
+        },
+        {
+          "column": "gmt_create"
+        },
+        {
+          "column": "gmt_update"
+        },
+        {
+          "column": "type"
+        }
+      ],
+      "delete": [
+        {
+          "column": "id"
+        }
+      ]
+    }
+  ]
+}
