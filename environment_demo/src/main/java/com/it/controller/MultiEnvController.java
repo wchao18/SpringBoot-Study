@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author wangchao
- * @description TODO
+ * @description 环境测试
  * @date 2020/06/06 10:21
  */
 @RestController
-public class HelloController {
+public class MultiEnvController {
 
     @Autowired
     private HelloService helloService;
