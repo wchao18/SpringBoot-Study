@@ -14,7 +14,7 @@ public class TestController {
 
     @RequestMapping("/value")
     public String getValue(){
-        return "success";
+        return "成功";
     }
 
     @RequestMapping("/login")
