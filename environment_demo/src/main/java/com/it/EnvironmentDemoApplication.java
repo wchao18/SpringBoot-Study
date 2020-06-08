@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * 配置文件优先级：先properties后yml,yml会覆盖properties中相同的配置
+ * 配置文件优先级：-Dspring.profiles.active=prd, 由jar包外向jar包内进行寻找，优先加载带profile的，再加载不带profile的
  */
 @SpringBootApplication
 //propertySource只加载properties文件

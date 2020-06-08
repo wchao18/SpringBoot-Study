@@ -26,7 +26,7 @@ public class ConfigController {
 
     @RequestMapping("/config")
     public String getConfigTestName() {
-        return student.toString();
+        return configTestName;
     }
 
 
