@@ -39,6 +39,8 @@ public class RedisTemplateConfig {
         //redisTemplate.setValueSerializer(new FastjsonSerializer(Object.class));
         //普通自定义的序列化
         //redisTemplate.setValueSerializer(new RedisObjectSerializer());
+        redisTemplate.setHashKeySerializer(new StringRedisSerializer());
+        redisTemplate.setHashValueSerializer(new Jackson2JsonRedisSerializer<Object>(Object.class));
         return redisTemplate;
     }
 }
