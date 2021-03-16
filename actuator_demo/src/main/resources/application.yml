@@ -2,7 +2,8 @@ server:
   port: 8090
 management:
   security:
-    enabled: true  #系统的安全配置,默认开启
+    enabled: false  #系统的安全配置,默认开启,导致/health无法读取自定义的配置文件(/health和/info默认都是开启的)
+  context-path: /xxx
 
 #配置actuator的info的信息
 info:

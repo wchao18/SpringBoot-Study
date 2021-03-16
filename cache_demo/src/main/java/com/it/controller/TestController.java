@@ -1,6 +1,6 @@
 package com.it.controller;
 
-import com.it.filter.RedisBloomFilter;
+import com.it.filter2.RedisBloomFilter;
 import com.it.mapper.UserMapper;
 import com.it.pojo.NullValueResultDO;
 import com.it.pojo.UserPojo;

@@ -1,6 +1,6 @@
 package com.it.init;
 
-import com.it.filter.RedisBloomFilter;
+import com.it.filter2.RedisBloomFilter;
 import com.it.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

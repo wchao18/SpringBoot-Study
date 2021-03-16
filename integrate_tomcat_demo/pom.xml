@@ -27,14 +27,6 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-
-
         <!--以下配置 外部Tomcat生效-->
         <dependency>
             <groupId>javax.servlet</groupId>

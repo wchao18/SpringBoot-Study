@@ -19,7 +19,7 @@ import java.util.List;
 public class TestController {
 
     @RequestMapping("/add")
-    public String add(@Valid AddDto addDto, BindingResult bindingResult) throws Exception{
+    public String add(@Valid AddDto addDto, BindingResult bindingResult) throws Exception {
         if (bindingResult.hasErrors()) {
             List<ObjectError> allErrors = bindingResult.getAllErrors();
             for (ObjectError allError : allErrors) {

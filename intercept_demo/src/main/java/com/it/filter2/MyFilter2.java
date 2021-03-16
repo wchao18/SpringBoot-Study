@@ -4,11 +4,6 @@ import javax.servlet.*;
 import javax.servlet.FilterConfig;
 import java.io.IOException;
 
-/**
- * @author wangchao
- * @description
- * @date 2020/06/08 17:19
- */
 public class MyFilter2 implements Filter {
 
     @Override

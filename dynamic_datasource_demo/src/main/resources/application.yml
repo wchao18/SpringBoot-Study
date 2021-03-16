@@ -1,37 +1,36 @@
 server:
   port: 80
 
-spring:
-  datasource:
-    test1:
-      type: com.alibaba.druid.pool.DruidDataSource   #数据源类型
-      driver-class-name: com.mysql.jdbc.Driver   #mysql驱动程序类
-      url: jdbc:mysql://127.0.0.1:3306/mydb?useUnicode=true&characterEncoding=utf8  #编码不加，可能会乱码
-      username: root
-      password: 123456
-      filters : stat,wall,log4j  #数据源监控配置
-      dbcp2:
-        initial-size: 5        #初始化提供的连接数
-        min-idle: 5            #数据库连接池维持的最小连接数
-        max-total: 20          #最大连接数
-        max-wait-millis: 200   #等待连接的最大超时时间,单位ms
-
-    test2:
-      type: com.alibaba.druid.pool.DruidDataSource   #数据源类型
-      driver-class-name: com.mysql.jdbc.Driver   #mysql驱动程序类
-      url: jdbc:mysql://127.0.0.1:3306/mydb2?useUnicode=true&characterEncoding=utf8  #编码不加，可能会乱码
-      username: root
-      password: 123456
-      filters: stat,wall,log4j  #数据源监控配置
-      dbcp2:
-        initial-size: 5        #初始化提供的连接数
-        min-idle: 5            #数据库连接池维持的最小连接数
-        max-total: 20          #最大连接数
-        max-wait-millis: 200   #等待连接的最大超时时间,单位ms
+datasource:
+  type: com.alibaba.druid.pool.DruidDataSource
+  master:
+     #数据源类型
+    driver-class-name: com.mysql.jdbc.Driver   #mysql驱动程序类
+    url: jdbc:mysql://127.0.0.1:3306/mydb?useUnicode=true&characterEncoding=utf8  #编码不加，可能会乱码
+    username: root
+    password: 123456
+    filters : stat,wall,log4j  #数据源监控配置
+    dbcp2:
+      initial-size: 5        #初始化提供的连接数
+      min-idle: 5            #数据库连接池维持的最小连接数
+      max-total: 20          #最大连接数
+      max-wait-millis: 200   #等待连接的最大超时时间,单位ms
+  slave:
+    driver-class-name: com.mysql.jdbc.Driver   #mysql驱动程序类
+    url: jdbc:mysql://127.0.0.1:3306/mydb2?useUnicode=true&characterEncoding=utf8  #编码不加，可能会乱码
+    username: root
+    password: 123456
+    filters: stat,wall,log4j  #数据源监控配置
+    dbcp2:
+      initial-size: 5        #初始化提供的连接数
+      min-idle: 5            #数据库连接池维持的最小连接数
+      max-total: 20          #最大连接数
+      max-wait-millis: 200   #等待连接的最大超时时间,单位ms
 
 
 mybatis:
   type-aliases-package: com.it.dao.domain       #设置类的别名,然后在mapper的xml文件中设置
+  mapper-locations: classpath*:mybatis/**/*.xml     #mapper.xml配置文件
 logging:
   level:
-     root : info
+     root : debug

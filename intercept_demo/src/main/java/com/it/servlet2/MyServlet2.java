@@ -7,11 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @author wangchao
- * @description servlet3.0 需要扫描这个类@ServletComponentScan
- * @date 2020/06/08 11:43
- */
 public class MyServlet2 extends HttpServlet {
 
     @Override
