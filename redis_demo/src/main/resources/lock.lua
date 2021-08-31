@@ -8,6 +8,7 @@ if(redis.call('exists', key) == 0) then -- 判断是否存在
     return 1; -- 返回结果
 end;
 
+
 if(redis.call('hexists', key, threadId) == 1) then -- 锁已经存在，判断threadId是否是自己	
     redis.call('hincrby', key, threadId, '1'); -- 不存在, 获取锁，重入次数+1
     redis.call('expire', key, releaseTime); -- 设置有效期
