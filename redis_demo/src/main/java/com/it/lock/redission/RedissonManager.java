@@ -1,4 +1,4 @@
-package com.it.lock;
+package com.it.lock.redission;
 
 import com.it.config.RedisConfig;
 import lombok.extern.slf4j.Slf4j;
