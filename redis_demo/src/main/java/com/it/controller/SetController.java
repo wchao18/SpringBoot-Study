@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class SetController {
 
     @Autowired
-    private RedisTemplate<String, String> stringRedisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
 
     @GetMapping("/set")
-    public String set() {
-        stringRedisTemplate.opsForValue().set("name", "test");
-        return stringRedisTemplate.opsForValue().get("name");
+    public Object set() {
+        redisTemplate.opsForValue().set("name", "test");
+        return redisTemplate.opsForValue().get("name");
     }
 }

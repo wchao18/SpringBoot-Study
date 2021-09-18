@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ZSetController {
 
     @Autowired
-    private RedisTemplate<String, String> stringRedisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
 
     @GetMapping("/Zset")
-    public String zset() {
-        stringRedisTemplate.opsForValue().set("name", "test");
-        return stringRedisTemplate.opsForValue().get("name");
+    public Object zset() {
+        redisTemplate.opsForValue().set("name", "test");
+        return redisTemplate.opsForValue().get("name");
     }
 }

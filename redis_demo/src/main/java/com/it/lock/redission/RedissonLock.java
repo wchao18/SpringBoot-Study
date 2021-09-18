@@ -1,7 +1,9 @@
 package com.it.lock.redission;
 
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.Redisson;
 import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -15,14 +17,14 @@ import java.util.concurrent.TimeUnit;
  */
 @Component
 @Slf4j
-public class RedisDistributedLock {
+public class RedissonLock {
 
     @Autowired
-    private RedissonManager redissonManager;
+    private RedissonClient redissonClient;
 
     @Scheduled(cron = "0 0/1 * * * ?")
     public void redissonTask() {
-        RLock rlock = redissonManager.getRedisson().getLock("TEST_LOCK");
+        RLock rlock = redissonClient.getLock("TEST_LOCK");
         boolean tryLockResult = false;
         long waitTime = 0;//这个有坑，一般设置为0,否则，同一时刻会有两个任务同时执行
         long leaseTime = 50;

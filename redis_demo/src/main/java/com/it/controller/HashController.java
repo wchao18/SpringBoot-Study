@@ -14,12 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class HashController {
 
     @Autowired
-    private RedisTemplate<String, String> stringRedisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
 
 
     @GetMapping("/hash")
-    public String hash() {
-        stringRedisTemplate.opsForValue().set("name", "test");
-        return stringRedisTemplate.opsForValue().get("name");
+    public Object hash() {
+        redisTemplate.opsForValue().set("name", "test");
+        return redisTemplate.opsForValue().get("name");
     }
 }
