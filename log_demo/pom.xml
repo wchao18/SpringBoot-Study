@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.22.RELEASE</version>
+        <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.it</groupId>
@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.26</version>
+            <version>1.7.7</version>
         </dependency>
 
        <!-- <dependency>
@@ -70,23 +70,22 @@
         </dependency>-->
 
         <!--log4j需要配置文件-->
-       <!-- <dependency>
+      <!--  <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.26</version>
         </dependency>-->
 
-        <dependency>
+       <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.1.9</version>
+            <version>1.2.3</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.1.9</version>
+            <version>1.2.3</version>
         </dependency>
-
 
     </dependencies>
 
