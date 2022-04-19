@@ -2,10 +2,10 @@ server:
   port: 9002
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mydb?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.13.170:3306/sass?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: Root!@#
   jpa:
     database: MySQL
     show-sql: true
@@ -13,9 +13,9 @@ spring:
 
 conf:
   mysql:
-    host: 127.0.0.1
+    host: 192.168.13.170
     port: 3306
     username: root
-    password: 123456
+    password: Root!@#
     #binlogName: binlog.000038
     #position: 60451

@@ -1,8 +1,8 @@
 {
-  "database": "mydb",
+  "database": "sass",
   "tableList": [
     {
-      "tableName": "t_tenant_permission",
+      "tableName": "t_order",
       "level": 1,
       "insert": [
         {

@@ -5,11 +5,11 @@ import java.util.Map;
 
 public class Constant {
 
-    private static final String DB_NAME = "mydb";
+    private static final String DB_NAME = "sass";
 
     public static class USER_TABLE_INFO {
 
-        public static final String TABLE_NAME = "t_tenant_permission";
+        public static final String TABLE_NAME = "t_order";
     }
 
     public static Map<String, String> table2Db;
