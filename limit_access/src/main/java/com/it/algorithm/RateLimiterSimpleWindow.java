@@ -1,11 +1,13 @@
 package com.it.algorithm;
 
 import java.time.LocalTime;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author wangchao
- * @description TODO
+ * @description 固定窗口
  * @date 2022/04/18 21:17
  */
 public class RateLimiterSimpleWindow {
@@ -29,7 +31,7 @@ public class RateLimiterSimpleWindow {
     public static void main(String[] args) throws InterruptedException {
         for (int i = 0; i < 10; i++) {
             //Thread.sleep(200);
-            Thread.sleep(450);
+            Thread.sleep(450); //时间窗口改变导致qps>2
             LocalTime now = LocalTime.now();
             if (!tryAcquire()) {
                 System.out.println(now + " 被限流");
