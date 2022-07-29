@@ -1,0 +1,2 @@
+a=com.it.spi.service.impl.ADubboServiceImpl
+b=com.it.spi.service.impl.BDubboServiceImpl
