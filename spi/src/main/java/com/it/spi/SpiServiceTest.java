@@ -1,7 +1,10 @@
 package com.it.spi;
 
 import com.it.spi.api.ApiService;
+import com.it.spi.api.SpringApiService;
+import org.springframework.core.io.support.SpringFactoriesLoader;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.ServiceLoader;
 import java.util.stream.StreamSupport;
@@ -14,10 +17,11 @@ import java.util.stream.StreamSupport;
 public class SpiServiceTest {
 
     public static void main(String[] args) {
-        ServiceLoader<ApiService> load = ServiceLoader.load(ApiService.class);
-        final Optional<ApiService> serializer = StreamSupport.stream(load.spliterator(), false)
-                .findFirst();
-        ApiService apiService = serializer.get();
-        apiService.sayHello();
+        //JDK test
+        ServiceLoader<ApiService> serviceLoader = ServiceLoader.load(ApiService.class);
+        serviceLoader.forEach(ApiService::sayHello);
+        System.out.println("===============");
+        List<SpringApiService> springApiServices = SpringFactoriesLoader.loadFactories(SpringApiService.class, SpiServiceTest.class.getClassLoader());
+        springApiServices.forEach(SpringApiService::test);
     }
 }
